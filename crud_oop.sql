@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2020 at 11:43 AM
+-- Generation Time: Jul 03, 2021 at 05:32 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -29,19 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `student` (
+  `id` int(11) NOT NULL,
   `enroll_no` varchar(15) NOT NULL,
   `name` varchar(50) NOT NULL,
   `mobile` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `student`
---
-
-INSERT INTO `student` (`enroll_no`, `name`, `mobile`) VALUES
-('1', 'Ravi ', '9876543210'),
-('2', 'Suchit', '9876543212'),
-('3', 'Jagat', '9875635363');
 
 --
 -- Indexes for dumped tables
@@ -51,7 +43,17 @@ INSERT INTO `student` (`enroll_no`, `name`, `mobile`) VALUES
 -- Indexes for table `student`
 --
 ALTER TABLE `student`
-  ADD PRIMARY KEY (`enroll_no`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `student`
+--
+ALTER TABLE `student`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
